@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <style>
+        .btn {
+            height: 50px;
+            width: 50px;
+        }
+        #bt0 {
+            width: 105px;
+        }
+    </style>
+    <script>
+        function resultado() {
+            var exp = document.getElementById('exp').innerText
+
+            var result = eval(exp)
+
+            document.getElementById('res').innerHTML = "Resultado: " + result
+        }
+        function c1() {
+        
+    document.getElementById('exp').innerHTML = ""
+        }
+
+        function teste(btn) {
+            
+    var exp = document.getElementById('exp').innerText
+   exp = exp + "" + btn
+    document.getElementById('exp').innerHTML = exp
+        }
+    </script>
+        </head>
+<body>
+    <button class="btn" onclick="c1()">C</button>
+    <button class="btn" >+/-</button>
+    <button class="btn" >%</button>
+    <button class="btn"  onclick="teste('/')">/</button>
+    <br></Sbr>
+    <button class="btn"  onclick="teste(7)">7</button>
+    <button class="btn"  onclick="teste(8)">8</button>
+    <button class="btn"  onclick="teste(9)">9</button>
+    <button class="btn"  onclick="teste('*')">*</button>
+    
+    <br></Sbr>
+    <button class="btn"  onclick="teste(4)">4</button>
+    <button class="btn"  onclick="teste(5)">5</button>
+    <button class="btn"  onclick="teste(6)">6</button>
+    <button class="btn"  onclick="teste('-')">-</button>
+    <br></Sbr>
+    <button class="btn"  onclick="teste(1)">1</button>
+    <button class="btn"  onclick="teste(2)">2</button>
+    <button class="btn"  onclick="teste(3)">3</button>
+    <button class="btn"  onclick="teste('+')">+</button>
+    <br></Sbr>
+    <button class="btn" onclick="teste(0)" id="bt0">0</button>
+    
+    
+    
+    
+    <button class="btn"onclick="teste('.')" >.</button>
+    <button class="btn"  onclick="resultado()">=</button>
+   
+    
+    <br/>
+    <p id="exp"></p>
+    <p id="res">Resultado: </p>
+</body>
+</html>
+       
